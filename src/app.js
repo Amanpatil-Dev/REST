@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 require('../src/db/conn')
 const route = require('../src/routers/router')
-const Port = process.env.PORT || 3000
+const port = process.env.PORT 
 
 
 
@@ -13,6 +13,6 @@ app.use(express.json())
 // Router to use
 app.use(route)
 
-app.listen(Port, () => {
-    console.log(`server is up and running`)
+app.listen(port, () => {
+    console.log(`server is up and running`,port)
 })
